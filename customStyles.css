@@ -1,0 +1,48 @@
+.custom-select-wrapper {
+    background-color: #020817; 
+    color: #fff;
+    border: none;
+}
+
+.custom-select-wrapper select::placeholder {
+    color: #ffffff; 
+}
+
+.custom-select-wrapper .stdropdown-menu {
+  border: 1px solid rgb(0, 0, 0);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.custom-select-wrapper .stdropdown-item {
+  background-color: #020817; 
+  color: #fff; 
+  border: 1px solid #555;
+}
+
+.custom-select-wrapper .stdropdown-item:hover {
+  background-color: #0f172a;
+  color: #fff; 
+}
+
+.custom-select-wrapper .stdropdown-container {
+    border: 1px solid rgba(155, 185, 225, 0.193);
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+}
+
+.custom-select-wrapper .stdropdown-tool {
+    padding-left: 10px;
+}
+
+.custom-select-wrapper input {
+    background-color: #1e293b; 
+    color: #fff; 
+    border: 1px solid rgba(155, 185, 225, 0.193);
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.custom-select-wrapper input::placeholder {
+    color: #fff 
+}
