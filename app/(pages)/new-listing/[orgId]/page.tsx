@@ -1,7 +1,6 @@
 import { Checkbox } from "@/components/Checkbox";
+import { Location } from "@/components/Location";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
 import { getUser } from "@workos-inc/authkit-nextjs";
 import { WorkOS } from "@workos-inc/node";
@@ -30,15 +29,26 @@ export default async function NewListingForOrgPage(props: PageProps) {
   return (
     <form action="" className="container mt-6 flex flex-col gap-4">
       <Input placeholder="Job Title" />
-      <div className="flex gap-4">
-      <div>
-        Remote?
-      <Checkbox labels={["On-site", "Hybrid-remote", "Fully remote"]} />
+      <div className="grid grid-cols-3 gap-6 *:grow">
+        <div>
+          <span className="flex flex-col pb-2">Remote?</span>
+          <Checkbox labels={["On-site", "Hybrid-remote", "Fully remote"]} />
+        </div>
+        <div>
+          <span className="flex flex-col pb-2">Full time?</span>
+          <Checkbox labels={["Project", "Part-time", "Full time"]} />
+        </div>
+        <div className="flex flex-col">
+          <span className="pb-2">Salary range</span>
+          <div className="relative">
+          <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">$</span>
+          <Input className="pl-8" placeholder="Salary" />
+        </div>
+        </div>
       </div>
       <div>
-        Full time?
-        <Checkbox labels={["Project", "Part-time", "Full time"]} />
-      </div>
+        <span className="flex flex-col mb-2">Location</span>
+        <Location />
       </div>
       <Textarea placeholder="Job Description" />
     </form>
