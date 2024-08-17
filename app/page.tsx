@@ -1,11 +1,22 @@
 import Hero from "./components/Hero";
 import Jobs from "./components/Jobs";
+import {
+  getSignInUrl,
+  getSignUpUrl,
+  getUser,
+} from "@workos-inc/authkit-nextjs";
 
-export default function Home() {
+export default async function Home() {
+  const { user } = await getUser();
+
+  const signInUrl = await getSignInUrl();
+
+  const signUpUrl = await getSignUpUrl();
+
   return (
-  <div>
-    <Hero/>
-    <Jobs/>
-  </div>
+    <div>
+      <Hero />
+      <Jobs />
+    </div>
   );
 }
