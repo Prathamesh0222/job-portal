@@ -1,5 +1,5 @@
-import Hero from "./components/Hero";
-import Jobs from "./components/Jobs";
+import Hero from "../components/Hero";
+import Jobs from "../components/Jobs";
 import {
   getSignInUrl,
   getSignUpUrl,
