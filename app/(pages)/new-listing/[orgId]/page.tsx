@@ -1,7 +1,12 @@
 import { Checkbox } from "@/components/Checkbox";
+import { CustomInput } from "@/components/CustomInput";
 import { Location } from "@/components/Location";
+import { ProfileImage } from "@/components/ProfileImage";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { faEnvelope, faFileImport, faPhone, faUser, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { getUser } from "@workos-inc/authkit-nextjs";
 import { WorkOS } from "@workos-inc/node";
 
@@ -28,7 +33,7 @@ export default async function NewListingForOrgPage(props: PageProps) {
 
   return (
     <form action="" className="container mt-6 flex flex-col gap-4">
-      <Input placeholder="Job Title" />
+      <Input placeholder="Job Title" />      
       <div className="grid grid-cols-3 gap-6 *:grow">
         <div>
           <span className="flex flex-col pb-2">Remote?</span>
@@ -41,14 +46,21 @@ export default async function NewListingForOrgPage(props: PageProps) {
         <div className="flex flex-col">
           <span className="pb-2">Salary range</span>
           <div className="relative">
-          <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">$</span>
-          <Input className="pl-8" placeholder="Salary" />
-        </div>
+            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
+              $
+            </span>
+            <Input className="pl-8" placeholder="Salary" />
+          </div>
         </div>
       </div>
       <div>
         <span className="flex flex-col mb-2">Location</span>
+        <div className="w-full">
         <Location />
+        </div>
+        <div className="mt-4">
+        <ProfileImage/>
+        </div>
       </div>
       <Textarea placeholder="Job Description" />
     </form>
