@@ -17,8 +17,8 @@ export function Location() {
     const [stateid, setstateid] = useState(0);
 
     return (
-      <div className="flex fill-white justify-between">
-        <div className="custom-select-wrapper">
+      <div className="flex w-full fill-white gap-4">
+        <div className="custom-select-wrapper w-full">
         <CountrySelect
           onChange={(e:SelectProps) => {
             setCountryid(e.id);
@@ -26,7 +26,7 @@ export function Location() {
           placeHolder="Select Country"
         />
         </div>
-        <div className="custom-select-wrapper">
+        <div className="custom-select-wrapper w-full">
         <StateSelect
           countryid={countryid}
           onChange={(e:SelectProps) => {
@@ -35,7 +35,7 @@ export function Location() {
           placeHolder="Select State"
         />
         </div>
-        <div className="custom-select-wrapper">
+        <div className="custom-select-wrapper w-full">
         <CitySelect
           countryid={countryid}
           stateid={stateid}
