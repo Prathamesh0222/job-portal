@@ -1,4 +1,4 @@
-import { Label } from "./ui/label";
+import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 
 export function Checkbox({labels}: {labels: string[]}) {

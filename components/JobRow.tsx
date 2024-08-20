@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const JobRow = () => {
   return (
     <div>
-      <div className="bg-slate-900 p-4 shadow-sm rounded-lg relative">
+      <div className="border cursor-pointer hover:bg-slate-900 bg-transparent p-4 shadow-sm rounded-lg relative">
         <div className="absolute top-4 cursor-pointer right-4">
         <FontAwesomeIcon className="size-4 text-slate-300" icon={faHeart} />
         </div>
@@ -13,7 +13,7 @@ const JobRow = () => {
             <img
               src="https://www.freepnglogos.com/uploads/spotify-logo-png/file-spotify-logo-png-4.png"
               alt="Icon"
-              className="size-12"
+              className="size-12 min-w-12"
             />
           </div>
           <div className="md:flex grow">

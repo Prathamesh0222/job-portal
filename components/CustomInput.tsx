@@ -1,7 +1,7 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
-import { Input } from "./ui/input"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhone } from "@fortawesome/free-solid-svg-icons"
+import { Input } from "@/components/ui/input"
 
 export const CustomInput = ({label,icon}:{label:string,icon:IconDefinition}) => {
    return <div className="relative">

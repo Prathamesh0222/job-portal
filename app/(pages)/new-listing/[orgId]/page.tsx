@@ -1,8 +1,6 @@
 import { Checkbox } from "@/components/Checkbox";
-import { CustomInput } from "@/components/CustomInput";
 import { Location } from "@/components/Location";
 import { ProfileImage } from "@/components/ProfileImage";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { faEnvelope, faFileImport, faPhone, faUser, IconDefinition } from "@fortawesome/free-solid-svg-icons";
